@@ -10,7 +10,7 @@ namespace COMP003A.Assignment4
             
             int counter = 0;
 
-            do
+            while (counter <=5)
             {
                 Console.Write("\nEnter choice: ");
 
@@ -20,10 +20,18 @@ namespace COMP003A.Assignment4
                 {
                     case "3":
                         Console.WriteLine("Program ended.");
+                        Environment.Exit(0);
                         break;
 
                     case "1": 
                         counter++;
+
+                        if (counter == 3)
+                        {
+                            Console.WriteLine("Step 3 is restricted and was skipped.");
+                            continue;
+                        }
+
                         Console.WriteLine($"Step {counter} completed.");
                             break;
 
@@ -36,13 +44,14 @@ namespace COMP003A.Assignment4
                         break;
                 }
 
-                if (counter == 3)
-                    Console.WriteLine("Step 3 is restricted and was skipped.");
-
                 if (counter == 5)
+                {
                     Console.WriteLine("The program has ended for safety reasons.");
+                    break;
+                }
+                    
             }
-            while (counter <=4);
+         
 
             
            
