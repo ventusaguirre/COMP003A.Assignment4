@@ -39,7 +39,7 @@ namespace COMP003A.Assignment4
                             continue;
                         }
 
-                        Console.WriteLine($"Step {counter} completed.");
+                        Console.WriteLine($"Step {counter} completed."); //is skipped if either statement above is true
                             break;
 
                     case "2": //displays how many steps have been completed
