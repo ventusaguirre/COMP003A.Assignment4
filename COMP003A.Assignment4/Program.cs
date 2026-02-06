@@ -18,17 +18,18 @@ namespace COMP003A.Assignment4
 
                 switch (userInput) 
                 {
-                    case "3":
-                        Console.WriteLine("Program ended.");
-                        Environment.Exit(0);
-                        break;
-
                     case "1": 
                         counter++;
 
                         if (counter == 3)
                         {
                             Console.WriteLine("Step 3 is restricted and was skipped.");
+                            continue;
+                        }
+
+                        if (counter >= 5)
+                        {
+                            Console.WriteLine("The routine has ended for safety reasons.");
                             continue;
                         }
 
@@ -39,22 +40,17 @@ namespace COMP003A.Assignment4
                         Console.WriteLine($"Current progress: {counter} steps completed.");
                         break;
 
+                    case "3":
+                        Console.WriteLine("Program ended.");
+                        Environment.Exit(0);
+                        break;
 
                     default: Console.WriteLine("Invalid input");
                         break;
                 }
-
-                if (counter == 5)
-                {
-                    Console.WriteLine("The program has ended for safety reasons.");
-                    break;
-                }
                     
             }
-         
-
-            
-           
+     
         }
     }
 }
