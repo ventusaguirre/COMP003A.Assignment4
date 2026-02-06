@@ -10,6 +10,11 @@ namespace COMP003A.Assignment4
             
             int counter = 0; 
 
+            /*
+             The following loop exists to repeatedly prompt user input to make a choice from the menu.
+             The loop will only run while the counter is less than or equal to the value 5.
+            */
+
             while (counter <=5)
             {
                 Console.Write("\nEnter choice: "); 
